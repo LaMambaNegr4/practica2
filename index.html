@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Bocelli</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 36px;
+            color: #4CAF50;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .section {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 300px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Andrea Bocelli</h1>
+
+    <!-- Biografía visible al inicio -->
+    <section id="biografia" class="section visible">
+        <h2>Biografía</h2>
+        <p>Andrea Bocelli es un tenor, músico, escritor y productor musical italiano. Nació el 22 de septiembre de 1958 en Lajatico, Italia. Bocelli ha vendido más de 90 millones de discos en todo el mundo, convirtiéndose en uno de los artistas más conocidos en la música clásica y pop. A pesar de su ceguera, ha alcanzado el éxito global con su voz emotiva y ha sido galardonado con numerosos premios.</p>
+        <p>Su música abarca diversos géneros, incluyendo la ópera, el pop clásico y la música sacra. Su carrera despegó en 1994 cuando ganó el Sanremo Music Festival con la canción "Il Mare Calmo della Sera". Desde entonces, ha lanzado numerosos álbumes exitosos y ha colaborado con artistas como Sarah Brightman, Celine Dion, y Ed Sheeran.</p>
+        <img src="https://imgs.search.brave.com/hd0NuCPlEzP1ZAcLBkjynJC7dn0yo3wksFTbyNEENMU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi8zLzM1L0Fu/ZHJlYV9Cb2NlbGxp/XzIwMTkwNTExXzAx/Ny0yXyUyOGNyb3Bw/ZWQlMjkuanBnLzUx/MnB4LUFuZHJlYV9C/b2NlbGxpXzIwMTkw/NTExXzAxNy0yXyUy/OGNyb3BwZWQlMjku/anBn" alt="Andrea Bocelli Biografía"> <!-- Espacio para imagen -->
+    </section>
+
+    <!-- Sección de discografía -->
+    <section id="discografia" class="section">
+        <h2>Discografía</h2>
+        <p>Andrea Bocelli ha lanzado más de 15 álbumes de estudio, compilaciones y grabaciones en vivo. Algunos de sus álbumes más notables incluyen:</p>
+        <ul>
+            <li>Romanza (1997)</li>
+            <li>Sì (2018)</li>
+            <li>Amore (2006)</li>
+            <li>Cieli di Toscana (2001)</li>
+            <li>Sentimento (2002)</li>
+        </ul>
+        <img src="https://imgs.search.brave.com/qYjfeDga-57TkfyA7sLT1aDEIJSZOeP-m1ZJ5bswloQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzgxOEZCWkdDLXdM/LmpwZw" alt="Andrea Bocelli Discografía"> <!-- Espacio para imagen -->
+    </section>
+
+    <!-- Sección de futuras giras -->
+    <section id="giras" class="section">
+        <h2>Futuras Giras</h2>
+        <p>Andrea Bocelli realizará una serie de conciertos en los próximos meses, llevando su impresionante voz a escenarios alrededor del mundo. Algunos de sus próximos conciertos incluyen:</p>
+        <ul>
+            <li>Nueva York, EE.UU. - 10 de diciembre de 2024</li>
+            <li>París, Francia - 15 de enero de 2025</li>
+            <li>Sídney, Australia - 20 de febrero de 2025</li>
+        </ul>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Song_Bocelli_Lang_East_Meets_West.jpg/800px-Song_Bocelli_Lang_East_Meets_West.jpg?20120614210258" alt="Andrea Bocelli Giras"> <!-- Espacio para imagen -->
+    </section>
+
+    <!-- Botones para mostrar secciones -->
+    <div class="buttons">
+        <button onclick="mostrarSeccion('discografia')">Discografía</button>
+        <button onclick="mostrarSeccion('giras')">Futuras Giras</button>
+    </div>
+
+    <script>
+        function mostrarSeccion(seccion) {
+            // Ocultar todas las secciones
+            document.getElementById('biografia').classList.remove('visible');
+            document.getElementById('discografia').classList.remove('visible');
+            document.getElementById('giras').classList.remove('visible');
+
+            // Mostrar la sección seleccionada
+            document.getElementById(seccion).classList.add('visible');
+        }
+    </script>
+</body>
+</html>
